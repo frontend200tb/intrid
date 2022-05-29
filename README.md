@@ -1,6 +1,8 @@
 # intrid
 2022 Иван Каширин. Тестовое задание веб студии Intrid
 
+https://frontend200tb.github.io/intrid/
+
 По ссылке макет: https://www.figma.com/file/XHUxHopn0dK9Apx2WnjVsS/Templates-%234.-More-on-Figma.info-(Copy)?node-id=0%3A1
 Необходимо сделать:
 1. Адаптивная вёрстка
