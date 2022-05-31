@@ -33,10 +33,6 @@ textarea {
   font-family: "Montserrat", sans-serif;
 }
 
-input::-ms-clear {
-  display: none;
-}
-
 input[type="text"],
 input[type="email"],
 input[type="tel"],
@@ -46,11 +42,6 @@ textarea {
 
 button {
   cursor: pointer;
-}
-
-button::-moz-focus-inner {
-  padding: 0;
-  border: 0;
 }
 
 a,
@@ -146,6 +137,11 @@ body._lock {
   border: none;
   transition: all 0.3s linear 0s;
   box-shadow: 0px 0px 10px rgba(111, 111, 111, 0.25);
+  transition: all 350ms ease-in-out;
+}
+
+.btn:hover {
+  background-color: #1b3b7a;
 }
 
 .btn span {
@@ -186,6 +182,10 @@ body._lock {
   color: #4985FF;
   border-bottom: 1px solid #E0E0E0;
   transition: all 0.3s linear 0s;
+}
+
+.link:hover {
+  border-bottom: 1px solid #9e9d9d;
 }
 
 .link:active {
@@ -245,8 +245,12 @@ NAV
   transition: all 0.3s linear 0s;
 }
 
+.nav__link:hover {
+  background-color: #b5def1;
+  border-bottom: 2px solid #FFFFFF;
+}
+
 .nav__link._active {
-  background-color: none;
   border-bottom: 2px solid #FFFFFF;
 }
 /**************************
@@ -582,21 +586,24 @@ PROJECTS
 .slider {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  gap: 62px;
 }
 
 .slider__path_left {
-  width: 20px;
-  height: 40px;
+  margin: 0 10px;
+  width: 26px;
+  height: 45px;
   background-image: url(../assets/svg/path-left.svg);
+  cursor: pointer;
 }
 
 .slider__path_right {
-  width: 20px;
-  height: 40px;
+  margin: 0 10px;
+  width: 26px;
+  height: 45px;
   background-image: url(../assets/svg/path-right.svg);
+  cursor: pointer;
 }
 
 .projects__row {
@@ -604,6 +611,7 @@ PROJECTS
   justify-content: center;
   flex-wrap: wrap;
   gap: 30px;
+  max-width: 80%;
 }
 
 .projects__item {
@@ -611,6 +619,28 @@ PROJECTS
   height: 255px;
   border-radius: 10px;
   overflow: hidden;
+}
+
+.slider-dots {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-top: 50px;
+}
+
+.slider-dot {
+  display: inline-block;
+  width: 19px;
+  height: 19px;
+  border: 1px solid #909193;
+  border-radius: 50%;
+}
+
+.slider-dot.active {
+  background-color: #3f3f3f;
+  border-color: #000;
 }
 /**************************
 PROJECTS end
@@ -684,38 +714,6 @@ SUBSCRIBE
   padding-right: 10px;
 }
 
-.form-subcribe__input::-webkit-input-placeholder {
-  font-family: inherit;
-  font-weight: 400;
-  font-size: 13px;
-  line-height: 45px;
-  color: #999999;
-}
-
-.form-subcribe__input::-moz-placeholder {
-  font-family: inherit;
-  font-weight: 400;
-  font-size: 13px;
-  line-height: 45px;
-  color: #999999;
-}
-
-.form-subcribe__input:-ms-input-placeholder {
-  font-family: inherit;
-  font-weight: 400;
-  font-size: 13px;
-  line-height: 45px;
-  color: #999999;
-}
-
-.form-subcribe__input::-ms-input-placeholder {
-  font-family: inherit;
-  font-weight: 400;
-  font-size: 13px;
-  line-height: 45px;
-  color: #999999;
-}
-
 .form-subcribe__input::placeholder {
   font-family: inherit;
   font-weight: 400;
@@ -738,6 +736,10 @@ SUBSCRIBE
   text-align: center;
   color: #FFFFFF;
   transition: all 0.3s linear 0s;
+}
+
+.form-subcribe__button:hover {
+  background-color: #1b3b7a;
 }
 
 .form-subcribe__button_short {
@@ -881,4 +883,25 @@ FOOTER end
 }
 /**************************
 FOOTER end
+**************************/
+
+
+/**************************
+Анимация (появление блоков при скроле)
+**************************/
+.element-animation {
+  /* Скроем элемент в начальном состоянии */
+  background-color: #4985FF;
+  opacity: 0;
+  transform: translateY(100%);
+}
+
+.element-show {
+  background-color: #fff;
+  opacity: 1;
+  transition: all 1s;
+  transform: translateY(0%);
+}
+/**************************
+Анимация (появление блоков при скроле) end
 **************************/
