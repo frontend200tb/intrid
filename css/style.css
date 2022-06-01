@@ -786,7 +786,7 @@ SUBSCRIBE end
 MODAL
 **************************/
 .modal {
-  display: none;
+  opacity: 0;
   position: fixed;
   top: 0;
   left: 0;
@@ -794,12 +794,14 @@ MODAL
   height: 100%;
   background-color: rgba(0,0,0,0.6);
   overflow: auto;
+  pointer-events: none;
   transition: 0.5s all;
-  z-index: 10;
 }
 
 .modal.active {
-  display: block;
+  z-index: 10;
+  opacity: 1;
+  pointer-events: all;
   transition: 0.5s all;
 }
 
