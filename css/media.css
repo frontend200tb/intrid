@@ -1,8 +1,4 @@
 @media (min-width: 992px) {
-  .menu-footer__link:hover {
-    text-decoration: underline;
-  }
-
   .item-servises:hover {
     box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.2);
   }
@@ -173,15 +169,15 @@
     margin-bottom: calc(0px + 20 * ((100vw - 320px) / 820));
   }
 
-  .subcribe {
+  .subscribe {
     padding-top: calc(30px + 55 * ((100vw - 320px) / 820));
   }
 
-  .subcribe {
+  .subscribe {
     padding-bottom: calc(30px + 55 * ((100vw - 320px) / 820));
   }
 
-  .subcribe__form {
+  .subscribe__form {
     margin-bottom: calc(20px + 15 * ((100vw - 320px) / 820));
   }
 
@@ -231,6 +227,10 @@
   }
 }
 
+
+/**************************
+появляется BURGER MENU
+**************************/ 
 @media (max-width: 770px) {
   .header__menu {
     align-items: center;
@@ -400,23 +400,23 @@
 }
 
 @media (max-width: 500px) {
-  .form-subcribe__item {
+  .form-subscribe__item {
     margin-bottom: 20px;
   }
 
-  .form-subcribe__item_500px {
+  .form-subscribe__item_500px {
     display: block;
   }
 
-  .form-subcribe__input {
+  .form-subscribe__input {
     max-width: 100%;
   }
 
-  .form-subcribe__button_short {
+  .form-subscribe__button_short {
     display: none;
   }
 
-  .form-subcribe__button_full {
+  .form-subscribe__button_full {
     display: block;
   }
 }

@@ -650,27 +650,27 @@ PROJECTS end
 /**************************
 SUBSCRIBE
 **************************/
-.subcribe {
+.subscribe {
   background-color: #fff;
   padding-top: 85px;
   padding-bottom: 85px;
   text-align: center;
 }
 
-.subcribe__title {
+.subscribe__title {
   margin-bottom: 20px;
 }
 
-.subcribe__text {
+.subscribe__text {
   margin-bottom: 30px;
 }
 
-.subcribe__form {
+.subscribe__form {
   margin-bottom: 35px;
   margin-bottom: 35px;
 }
 
-.subcribe__info {
+.subscribe__info {
   margin-bottom: 20px;
   font-weight: 400;
   font-size: 13px;
@@ -678,16 +678,16 @@ SUBSCRIBE
   color: #999999;
 }
 
-.subcribe *:last-child {
+.subscribe *:last-child {
   margin-bottom: 0;
 }
 
-.form-subcribe {
+.form-subscribe {
   position: relative;
   text-align: left;
 }
 
-.form-subcribe__item {
+.form-subscribe__item {
   position: relative;
   width: 100%;
   max-width: 490px;
@@ -699,11 +699,11 @@ SUBSCRIBE
   overflow: hidden;
 }
 
-.form-subcribe__item_500px {
+.form-subscribe__item_500px {
   display: none;
 }
 
-.form-subcribe__input {
+.form-subscribe__input {
   position: absolute;
   top: 0;
   left: 0;
@@ -714,7 +714,7 @@ SUBSCRIBE
   padding-right: 10px;
 }
 
-.form-subcribe__input::placeholder {
+.form-subscribe__input::placeholder {
   font-family: inherit;
   font-weight: 400;
   font-size: 13px;
@@ -722,7 +722,7 @@ SUBSCRIBE
   color: #999999;
 }
 
-.form-subcribe__button {
+.form-subscribe__button {
   position: absolute;
   top: 0;
   width: 100%;
@@ -738,22 +738,22 @@ SUBSCRIBE
   transition: all 0.3s linear 0s;
 }
 
-.form-subcribe__button:hover {
+.form-subscribe__button:hover {
   background-color: #1b3b7a;
 }
 
-.form-subcribe__button_short {
+.form-subscribe__button_short {
   right: 0;
   max-width: 38.8%;
 }
 
-.form-subcribe__button_full {
+.form-subscribe__button_full {
   display: none;
   left: 0;
   max-width: 100%;
 }
 
-.form-subcribe__error {
+.form-subscribe__error {
   position: absolute;
   z-index: 10;
   bottom: -60px;
@@ -779,6 +779,82 @@ SUBSCRIBE
 }
 /**************************
 SUBSCRIBE end
+**************************/
+
+
+/**************************
+MODAL
+**************************/
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.6);
+  overflow: auto;
+  transition: 0.5s all;
+  z-index: 10;
+}
+
+.modal.active {
+  display: block;
+  transition: 0.5s all;
+}
+
+.popup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  background: #fff;
+  width: 320px;
+  height: 220px;
+  padding: 25px;
+  transition: 0.5s all;
+}
+
+.popup.active {
+  transform: translate(-50%, -50%) scale(1);
+  transition: 0.5s all;
+}
+
+.close-popup {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.modal-text {
+  margin: 50px auto;
+  font-size: 20px;
+  text-align: center;
+}
+
+.popup button {
+  width: 100%;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 18px;
+  border: 2px solid #2982ff;
+  background: #2982ff;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: 0.5s all;
+}
+
+.popup button:hover {
+  background: #fff;
+  color:#2982ff;
+  transition: 0.5s all;
+}
+/**************************
+MODAL end
 **************************/
 
 
@@ -859,6 +935,10 @@ FOOTER end
   color: #999999;
 }
 
+.menu-footer__link:hover {
+  text-decoration: underline;
+}
+
 .menu-footer__link_mail {
   background: url("../assets/svg/envelope.svg") 0px 3px/15px 15px no-repeat;
 }
@@ -889,7 +969,7 @@ FOOTER end
 /**************************
 Анимация (появление блоков при скроле)
 **************************/
-.element-animation {
+.animation-element {
   /* Скроем элемент в начальном состоянии */
   background-color: #4985FF;
   opacity: 0;
